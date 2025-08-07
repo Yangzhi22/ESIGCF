@@ -61,13 +61,13 @@ The folder named “configure” contains the hyperparameters, datasets, and oth
 1. `dataset_path` = ./dataset/`: Specifies the file path to the folder containing the dataset files.
 2. `dataset = yelp2018`: Sets the name of the dataset to be used, in this case, "yelp2018."
 3. `top_K = [5, 10, 20]`: Defines the list of top-K values for evaluation metrics, meaning the model will evaluate its performance using the top 5, top 10, and top 20 predictions.
-4. `training_epochs = 1500`: Specifies the number of training epochs, or iterations over the entire dataset, set to 1000.
-5. `early_stopping = 300`: Sets the early stopping criterion; training will halt if there's no improvement in performance for 10 consecutive tests.
+4. `training_epochs = 1000`: Specifies the number of training epochs, or iterations over the entire dataset, set to 1000.
+5. `early_stopping = 10`: Sets the early stopping criterion; training will halt if there's no improvement in performance for 10 consecutive tests.
 6. `embedding_size = 64`: Defines the size of the embeddings (or the dimensionality of the embedding vectors) for the model, set to 64.
 7. `batch_size = 2048`: Sets the number of samples in each batch for training, with 2048 samples per batch.
 8. `test_batch_size = 200`: Specifies the number of samples in each batch for testing, set to 200.
-9. `learn_rate = 0.0001`: Sets the learning rate, which controls the step size during optimization, to 0.001.
-10. `reg_lambda = 0.15`: Specifies the regularization parameter (often for weight decay), which helps prevent overfitting, set to 0.0001.
+9. `learn_rate = 0.001`: Sets the learning rate, which controls the step size during optimization, to 0.001.
+10. `reg_lambda = 0.0001`: Specifies the regularization parameter (often for weight decay), which helps prevent overfitting, set to 0.0001.
 11. `GCN_layer = 3`: Defines the number of graph convolutional network (GCN) layers in the model, set to 3.
 12. `sparsity_test = 0`: Indicates whether a sparsity test is performed. Setting this to 0 generally means the sparsity test is disabled. If you want to perform a sparsity test, please set it to 1.
 
