@@ -61,13 +61,13 @@ The folder named “configure” contains the hyperparameters, datasets, and oth
 1. `dataset_path` = ./dataset/`: Specifies the file path to the folder containing the dataset files.
 2. `dataset = yelp2018`: Sets the name of the dataset to be used, in this case, "yelp2018."
 3. `top_K = [5, 10, 20]`: Defines the list of top-K values for evaluation metrics, meaning the model will evaluate its performance using the top 5, top 10, and top 20 predictions.
-4. `training_epochs = 1000`: Specifies the number of training epochs, or iterations over the entire dataset, set to 1000.
-5. `early_stopping = 10`: Sets the early stopping criterion; training will halt if there's no improvement in performance for 10 consecutive tests.
+4. `training_epochs = 1500`: Specifies the number of training epochs, or iterations over the entire dataset, set to 1000.
+5. `early_stopping = 300`: Sets the early stopping criterion; training will halt if there's no improvement in performance for 10 consecutive tests.
 6. `embedding_size = 64`: Defines the size of the embeddings (or the dimensionality of the embedding vectors) for the model, set to 64.
 7. `batch_size = 2048`: Sets the number of samples in each batch for training, with 2048 samples per batch.
 8. `test_batch_size = 200`: Specifies the number of samples in each batch for testing, set to 200.
-9. `learn_rate = 0.001`: Sets the learning rate, which controls the step size during optimization, to 0.001.
-10. `reg_lambda = 0.0001`: Specifies the regularization parameter (often for weight decay), which helps prevent overfitting, set to 0.0001.
+9. `learn_rate = 0.0001`: Sets the learning rate, which controls the step size during optimization, to 0.001.
+10. `reg_lambda = 0.15`: Specifies the regularization parameter (often for weight decay), which helps prevent overfitting, set to 0.0001.
 11. `GCN_layer = 3`: Defines the number of graph convolutional network (GCN) layers in the model, set to 3.
 12. `sparsity_test = 0`: Indicates whether a sparsity test is performed. Setting this to 0 generally means the sparsity test is disabled. If you want to perform a sparsity test, please set it to 1.
 
@@ -83,6 +83,7 @@ Taking the Yelp2018 dataset provided in the LightGCN paper as an example, the fo
 | SimGCL         |     0.0721    |   0.0722    |    0.0601     |    0.0599   |
 | XSimGCL        |     0.0723    |   0.0724    |    0.0604     |    0.0599   |
 | EGCF           |     0.0748    |   0.0749    |    0.0617     |    0.0619   |
+| ESIGCF           |     0.0759    |   0.0759    |    0.0625     |    0.0625   |
 
 ## Acknowledgement
 
@@ -95,16 +96,7 @@ ID-GRec is based on numerous outstanding existing works. We have mainly drawn on
 
 > SSLRec: https://github.com/HKUDS/SSLRec (Output log)
 
-All the implemented methods in ID-GRec have been reproduced and integrated based on the source code provided by the original authors. Due to limitations in time and personal capabilities, there may be errors in the implementation of some models. We sincerely apologize if this causes any inconvenience to your research. If you have any questions regarding ID-GRec, please contact zhangyi.ahu@gmail.com.
+> EGCF: https://github.com/BlueGhostYi/ID-GRec
 
-## Citation
-If you find this work is helpful to your research, please consider citing our paper:
-```
-@article{zhang2024simplify,
-  title={Simplify to the Limit! Embedding-less Graph Collaborative Filtering for Recommender Systems},
-  author={Zhang, Yi and Zhang, Yiwen and Sang, Lei and Sheng, Victor S},
-  journal={ACM Transactions on Information Systems},
-  year={2024},
-  publisher={ACM New York, NY}
-}
-```
+All comparison baseline methods implemented in ID-GRec were reproduced and integrated by author Yi Zhang based on the source code provided by the original authors.
+
