@@ -1,0 +1,25 @@
+dataset_path = ./dataset/
+dataset = yelp2018
+top_K = [20, 40]
+training_epochs = 1500
+early_stopping = 300
+interval = 1
+embedding_size = 64
+batch_size = 2048
+test_batch_size = 2048
+learn_rate = 0.0001
+reg_lambda = 0.15
+GCN_layer = 3
+ssl_lambda = 0.7
+temperature = 0.1
+can_lambda = 0.25
+sparsity_test = 0
+
+
+# dataset = yelp2018 amazon-kindle iFashion amazon-electronics amazon-book
+# 原yelp2018 0.001-0.0001-0.1-0.1 iFashion 0.001-0.0001-0.05-0.2  amazon-book 0.001-0.0001-0.3-0.1
+# can_logits_loss = losses.get_InfoNCE_loss(pos_embedding, can_neg_emb, self.temperature)
+# yelp2018 0.0001-0.15-0.5-0.1-(-0.15)    iFashion 0.0001-0.1-10-0.25-(-0.1)  amazon-book 0.0001-0.1-10-0.1-(-0.15)
+# yelp2018 0.0001-0.15-0.6-0.1-(-0.15)-0.0759-0.0625-3层  iFashion 0.0001-0.1-10-0.25-(-0.1)-0.1275-0.0623-2层
+# amazon-book 0.0001-0.1-10-0.1-(-0.15)-0.0645-0.0513-3层
+# iFashion 0.0001-0.15-10-0.25-(-0.15)-0.1273-0.0622-2层 iFashion 0.0001-0.15-10-0.25-(-0.15)-0.1274-0.0619-3层
