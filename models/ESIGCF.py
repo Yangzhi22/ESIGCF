@@ -1,5 +1,5 @@
 """
-PyTorch Implementation of EsiGCF
+PyTorch Implementation of ESIGCF
 ESIGCF: Extremely
 Simplified but Intent-enhanced Graph Collaborative Filtering for Recommendation. Yang et al. EAAI'25
 For more information, please refer to:
